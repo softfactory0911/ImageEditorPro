@@ -6,21 +6,23 @@ class BottomBarContainer extends StatelessWidget {
   final String title;
   final IconData icons;
 
-  const BottomBarContainer(
-      {Key key, this.ontap, this.title, this.icons, this.colors})
-      : super(key: key);
+  const BottomBarContainer({Key key, this.ontap, this.title, this.icons, this.colors}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return xColumnCC
-        .list([
-          icons.xIcons(color: Colors.white),
-          4.0.sizedHeight(),
-          title.xText(color: Colors.white)
-        ])
+    return XColumnCC(mainAxisSize: MainAxisSize.min)
+        .list(
+          [
+            icons.xIcons(color: Colors.white),
+            4.0.sizedHeight(),
+            title.xText(color: Colors.white),
+          ],
+        )
+        .xap(value: 8)
         .xInkWell(onTap: ontap)
         .xMaterial(
           color: colors,
         )
-        .xContainer(padding: EdgeInsets.all(0.0), width: xwidth(context) / 5);
+        .xContainer(padding: EdgeInsets.all(0), width: xwidth(context) / 5);
   }
 }
