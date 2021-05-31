@@ -21,12 +21,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   File _image;
 
-  Future<void> getimageditor() =>
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
+  Future<void> getimageditor() => Navigator.push(context, MaterialPageRoute(builder: (context) {
         return ImageEditorPro(
           appBarColor: Colors.black87,
           bottomBarColor: Colors.black87,
           pathSave: null,
+          defaultPathImage: '/storage/emulated/0/Dev Nusawork/native_screenshot-20210531104722.png',
+          isShowingChooseImage: false,
+          isShowingFlip: false,
+          isShowingRotate: false,
+          isShowingBlur: false,
+          isShowingFilter: false,
+          isShowingEmoji: false,
         );
       })).then((geteditimage) {
         if (geteditimage != null) {
@@ -47,12 +53,10 @@ class _HomePageState extends State<HomePage> {
                 getimageditor();
               },
             ).toCenter(),
-            isFalse:
-                _image == null ? Container() : Image.file(_image).toCenter())
+            isFalse: _image == null ? Container() : Image.file(_image).toCenter())
         .xScaffold(
             appBar: 'Image Editor Pro example'.xTextColorWhite().xAppBar(),
-            floatingActionButton:
-                Icons.add.xIcons().xFloationActiobButton(color: Colors.red));
+            floatingActionButton: Icons.add.xIcons().xFloationActiobButton(color: Colors.red));
   }
 }
 
