@@ -32,9 +32,17 @@ class _TextAddEditState extends State<TextAddEdit> {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQueryData = MediaQuery.of(context);
+    final paddingBottom = mediaQueryData.padding.bottom;
+    final insetBottom = mediaQueryData.viewInsets.bottom;
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.only(
+          left: 16,
+          top: 16,
+          right: 16,
+          bottom: paddingBottom > 0 ? paddingBottom + insetBottom : 16 + insetBottom,
+        ),
         child: Form(
           key: formState,
           child: Column(
