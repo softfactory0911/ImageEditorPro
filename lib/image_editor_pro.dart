@@ -12,7 +12,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:image_editor_pro/modules/all_emojies.dart';
 import 'package:image_editor_pro/modules/bottombar_container.dart';
 import 'package:image_editor_pro/modules/emoji.dart';
-import 'package:image_editor_pro/modules/text.dart';
 import 'package:image_editor_pro/modules/textview.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
@@ -123,15 +122,17 @@ class _ImageEditorProState extends State<ImageEditorPro> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      if (widget.defaultPathImage != null) {
+      if (widget.defaultPathImage != null && widget.defaultPathImage.isNotEmpty) {
         var fileImage = File(widget.defaultPathImage);
-        final decodedImage = await decodeImageFromList(fileImage.readAsBytesSync());
-        setState(() {
-          width = decodedImage.width;
-          height = decodedImage.height;
-          _image = File(fileImage.path);
-          _controller.clear();
-        });
+        if (fileImage.existsSync()) {
+          final decodedImage = await decodeImageFromList(fileImage.readAsBytesSync());
+          setState(() {
+            width = decodedImage.width;
+            height = decodedImage.height;
+            _image = File(fileImage.path);
+            _controller.clear();
+          });
+        }
       }
     });
 
