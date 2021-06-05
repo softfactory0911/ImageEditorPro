@@ -7,14 +7,14 @@ packages:
       name: _fe_analyzer_shared
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "18.0.0"
+    version: "22.0.0"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "1.7.1"
   animated_interpolation:
     dependency: transitive
     description:
@@ -42,7 +42,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.5.0"
+    version: "2.6.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -151,10 +151,12 @@ packages:
   firexcode:
     dependency: "direct main"
     description:
-      name: firexcode
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.5"
+      path: "."
+      ref: "5145b902d8b739e1827908ed554cf38406a9d0fb"
+      resolved-ref: "5145b902d8b739e1827908ed554cf38406a9d0fb"
+      url: "https://github.com/CoderJava/FireXcode"
+    source: git
+    version: "1.0.7"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -412,7 +414,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.0"
+    version: "1.8.1"
   stack_trace:
     dependency: transitive
     description:
@@ -454,7 +456,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.19"
+    version: "0.3.0"
   typed_data:
     dependency: transitive
     description:

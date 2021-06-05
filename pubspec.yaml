@@ -1,6 +1,7 @@
 name: image_editor_pro
 description: Image Editor Plugin with simple, easy support for image editing using paints,text and emoji like stories.
 version: 1.1.8
+publish_to: none
 homepage: https://github.com/zeeshux7860/Image_editor_pro_package
 
 environment:
@@ -19,7 +20,10 @@ dependencies:
   screenshot: ^0.3.0
   signature: ^4.0.2
   flutter_colorpicker: ^0.4.0
-  firexcode: ^1.0.5
+  firexcode:
+    git:
+      url: https://github.com/CoderJava/FireXcode
+      ref: 5145b902d8b739e1827908ed554cf38406a9d0fb
 
   flutter_web_plugins:
     sdk: flutter
