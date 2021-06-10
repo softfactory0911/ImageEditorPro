@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+  coderjava_firexcode:
+    dependency: "direct main"
+    description:
+      name: coderjava_firexcode
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   collection:
     dependency: "direct main"
     description:
@@ -148,15 +155,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.0"
-  firexcode:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: "5145b902d8b739e1827908ed554cf38406a9d0fb"
-      resolved-ref: "5145b902d8b739e1827908ed554cf38406a9d0fb"
-      url: "https://github.com/CoderJava/FireXcode"
-    source: git
-    version: "1.0.7"
   flutter:
     dependency: "direct main"
     description: flutter

@@ -1,4 +1,4 @@
-import 'package:firexcode/firexcode.dart';
+import 'package:coderjava_firexcode/coderjava_firexcode.dart';
 
 import '../image_editor_pro.dart';
 import 'colors_picker.dart';

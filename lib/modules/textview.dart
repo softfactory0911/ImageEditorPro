@@ -1,4 +1,4 @@
-import 'package:firexcode/firexcode.dart';
+import 'package:coderjava_firexcode/coderjava_firexcode.dart';
 
 class TextView extends StatefulWidget {
   final double left;

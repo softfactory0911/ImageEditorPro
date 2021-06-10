@@ -1,4 +1,4 @@
-import 'package:firexcode/firexcode.dart';
+import 'package:coderjava_firexcode/coderjava_firexcode.dart';
 import 'package:image_editor_pro/data/data.dart';
 
 class Emojies extends StatefulWidget {

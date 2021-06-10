@@ -16,7 +16,7 @@ import 'package:image_editor_pro/modules/textview.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:signature/signature.dart';
-import 'package:firexcode/firexcode.dart';
+import 'package:coderjava_firexcode/coderjava_firexcode.dart';
 import 'dart:math' as math;
 
 import 'modules/color_filter_generator.dart';

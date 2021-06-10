@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:firexcode/firexcode.dart';
+import 'package:coderjava_firexcode/coderjava_firexcode.dart';
 
 class ImageView extends StatefulWidget {
   final File file;
