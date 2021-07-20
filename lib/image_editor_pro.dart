@@ -150,7 +150,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                           child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
-                            child: _image.path.decorationIFToFitHeight().xContainer(
+                            child: _image.path.decorationIFToFill().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
                                 width: width.toDouble(),
@@ -206,8 +206,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                               },
                               onpanupdate: (details) {
                                 setState(() {
-                                  offsets[f.key] =
-                                      Offset(offsets[f.key].dx + details.delta.dx, offsets[f.key].dy + details.delta.dy);
+                                  offsets[f.key] = Offset(offsets[f.key].dx + details.delta.dx, offsets[f.key].dy + details.delta.dy);
                                 });
                               },
                               mapJson: f.value,
@@ -218,8 +217,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                                   top: offsets[f.key].dy,
                                   ontap: () {
                                     showModalBottomSheet(
-                                        shape: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))
-                                            .xShapeBorder(),
+                                        shape: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)).xShapeBorder(),
                                         context: context,
                                         builder: (context) {
                                           return Sliders(
@@ -230,8 +228,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                                   },
                                   onpanupdate: (details) {
                                     setState(() {
-                                      offsets[f.key] =
-                                          Offset(offsets[f.key].dx + details.delta.dx, offsets[f.key].dy + details.delta.dy);
+                                      offsets[f.key] = Offset(offsets[f.key].dx + details.delta.dx, offsets[f.key].dy + details.delta.dy);
                                     });
                                   },
                                   mapJson: f.value,
@@ -278,20 +275,14 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             TextField(
                                 controller: heightcontroler,
                                 keyboardType: TextInputType.numberWithOptions(),
-                                decoration: InputDecoration(
-                                    hintText: 'Height',
-                                    contentPadding: EdgeInsets.only(left: 10),
-                                    border: OutlineInputBorder())),
+                                decoration: InputDecoration(hintText: 'Height', contentPadding: EdgeInsets.only(left: 10), border: OutlineInputBorder())),
                             10.0.sizedHeight(),
                             'Define Width'.text(),
                             10.0.sizedHeight(),
                             TextField(
                                 controller: widthcontroler,
                                 keyboardType: TextInputType.numberWithOptions(),
-                                decoration: InputDecoration(
-                                    hintText: 'Width',
-                                    contentPadding: EdgeInsets.only(left: 10),
-                                    border: OutlineInputBorder())),
+                                decoration: InputDecoration(hintText: 'Width', contentPadding: EdgeInsets.only(left: 10), border: OutlineInputBorder())),
                           ],
                         ),
                       ),
@@ -533,8 +524,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                     icons: Icons.photo,
                     ontap: () {
                       showModalBottomSheet(
-                          shape:
-                              BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)).xShapeBorder(),
+                          shape: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)).xShapeBorder(),
                           context: context,
                           builder: (context) {
                             return StatefulBuilder(
@@ -620,8 +610,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                             ).xContainer(
                                 color: Colors.black87,
                                 height: 300,
-                                borderRadius:
-                                    BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)));
+                                borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10)));
                           });
                     },
                     title: 'Filter',
@@ -751,11 +740,7 @@ class _SignatState extends State<Signat> {
   Widget build(BuildContext context) {
     return xListView.list(
       [
-        Signature(
-            controller: _controller,
-            height: height.toDouble(),
-            width: width.toDouble(),
-            backgroundColor: Colors.transparent),
+        Signature(controller: _controller, height: height.toDouble(), width: width.toDouble(), backgroundColor: Colors.transparent),
       ],
     );
   }
