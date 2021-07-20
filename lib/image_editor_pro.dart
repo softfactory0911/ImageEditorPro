@@ -150,7 +150,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                           child: ClipRect(
                             // <-- clips to the 200x200 [Container] below
 
-                            child: _image.path.decorationIFToFitHeight().xContainer(
+                            child: _image.path.decorationIFToFill().xContainer(
                                 padding: EdgeInsets.zero,
                                 // alignment: Alignment.center,
                                 width: width.toDouble(),
