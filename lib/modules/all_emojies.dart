@@ -21,20 +21,11 @@ class _EmojiesState extends State<Emojies> {
               shrinkWrap: true,
               physics: ClampingScrollPhysics(),
               scrollDirection: Axis.vertical,
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  mainAxisSpacing: 0.0, maxCrossAxisExtent: 60.0),
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(mainAxisSpacing: 0.0, maxCrossAxisExtent: 60.0),
               children: emojis.map((String emoji) {
                 return GridTile(
-                    child: emoji
-                        .xText(fontsize: 35)
-                        .xContainer(padding: EdgeInsets.zero)
-                        .xGesture(onTap: () {
-                  Navigator.pop(context, {
-                    'name': emoji,
-                    'color': Colors.white,
-                    'size': 12.0,
-                    'align': TextAlign.center
-                  });
+                    child: emoji.xText(fontsize: 35).xContainer(padding: EdgeInsets.zero).xGesture(onTap: () {
+                  Navigator.pop(context, {'name': emoji, 'color': Colors.white, 'size': 35.0, 'align': TextAlign.center});
                 }));
               }).toList())
           .xContainer(
